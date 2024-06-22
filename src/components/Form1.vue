@@ -44,14 +44,19 @@ export default {
 }
 .form_s1_right img:nth-child(2){
   position: absolute;
-  right: -206px;
+  right: -181px;
   bottom: -122px;
 }
 .form_section_1 > div{
   display: flex;
 }
 form a{
+  padding-top: 10px;
   padding: 17px 48px;
+}
+form a img{
+  padding-left: 2px;
+  padding-top: 5px;
 }
 .form_notif{
   color: #7E7E7F;

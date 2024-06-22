@@ -20,15 +20,25 @@ export default {
           <a href="#">О нас</a>
           <a href="#">Связаться</a>
         </div>
+        <div class="mobile_menu">
+          <div class="mobile_menu_row"></div>
+          <div class="mobile_menu_row"></div>
+          <div class="mobile_menu_row"></div>
+        </div>
       </div>
       <div class="header-right">
         <div class="header-call">
-          <a href="tel:88005300060" class="phone-number">8 800 530-00-60</a>
+          <a href="tel:88005300060" class="phone-number">8 800 350-00-60</a>
           <a id="form_cell_to_me" href="javascript:void(0)">Перезвоните мне</a>
         </div>
         <div class="header-icons">
           <a href="/"><img src="../assets/image/lk.svg" alt="Icon"></a>
           <a href="/"><img src="../assets/image/cart.svg" alt="Icon"></a>
+        </div>
+        <div class="header-icons icons-mobile">
+          <a href="/"><img class="call_icon" src="../assets/image/call.svg" alt="Icon"></a>
+          <a href="/"><img src="../assets/image/lk_mobile.svg" alt="Icon"></a>
+          <a href="/"><img src="../assets/image/cart_mobile.svg" alt="Icon"></a>
         </div>
       </div>
     </div>
@@ -117,6 +127,18 @@ export default {
 </template>
 
 <style scoped>
+.mobile_menu_row{
+  width: 20px;
+  height: 2px;
+  background: #000;
+}
+.mobile_menu{
+  display: none;
+}
+.mobile_menu_row:nth-child(2){
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
 .dishes_single{
   background: linear-gradient(0deg, #F3FFEF 0%, #EEFFE1 100%);
   max-width: 218px;
@@ -168,15 +190,17 @@ export default {
     background: #FFA333;
     color: #fff;
     display: block;
-    max-width: 275px;
+    max-width: 215px;
     border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
   }
   .header-icons{
     display: flex;
     gap: 10px;
     margin-right: 15px;
     position: relative;
-    top: 3px;
+    top: 2px;
   }
   .header-nav {
     display: flex;
@@ -188,11 +212,16 @@ export default {
   }
   .header-call{
     max-height: 82px;
-    margin-right: 60px;
+    margin-right: 78px;
+    margin-top: -2px;
+  
   }
   #form_cell_to_me{
     color: #FFA333;
     border-bottom: 1px dotted #FFA333;
+    font-size: 14px;
+    position: relative;
+    left: -2px;
   }
   .header_content{
    margin-top: 56px;
@@ -202,7 +231,7 @@ export default {
   }
   .logo img{
     position: relative;
-    top: 4px;
+    top: 2px;
   }
   .header{
     background-image: url('../assets/image/bg.png');
@@ -218,16 +247,24 @@ export default {
     display: flex;
     align-items: center;
   }
+  .header-left a{
+    font-size: 14px;
+    margin-bottom: -4px;
+  }
   .header-menu {
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-left: 60px;
+    row-gap: 20px;
+    column-gap: 20px;
+    margin-left: 110px;
+    margin-top: 3px;
   }
   .header-menu a {
     text-decoration: none;
     color: #282828;
     font-weight: 500;
+    font-size: 14px;
   }
 
   .header-right {
@@ -237,6 +274,69 @@ export default {
 
   .phone-number {
     margin-right: 20px;
+    font-size: 14px;
+    font-weight: 600;
   }
+  .icons-mobile{
+    display: none !important;
+  }
+  @media(max-width: 1600px){
+    .header-nav {
+      margin-right: 20px;
+      margin-left: 20px
+    }
+    .header-menu{
+      margin-left: 0;
+    }
+  }
+
+  @media(max-width: 1200px){
+    .header-icons{
+      display: none !important;
+    }
+    .icons-mobile{
+      display: flex !important;
+    }
+    .icons-mobile{
+      display: flex;
+    }
+    .icons-mobile img{
+      width: 40px;
+      height: 40px;
+    }
+    .header-call{
+      display: none;
+    }
+    .container_header{
+      margin-top: 0;
+    }
+    h1{
+      font-size: 20px;
+    }
+  }
+  @media(max-width: 900px){
+    .logo img{
+      height: 40px;
+    }
+    .header-icons img{
+      height: 30px;
+      width: 30px;
+    }
+    .header-nav{
+      height: 40px;
+    }
+    .header-menu{
+      display: none !important;
+    }
+    .city_change{
+      display: none;
+    }
+    .mobile_menu{
+      display: block !important;
+    }
+    .header{
+      background-image: url("../assets/image/bg_mobile.png");
+    }
   
+  }
 </style>

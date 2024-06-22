@@ -2,13 +2,15 @@
 import HeaderMain from './components/HeaderMain.vue'
 import MainInfo from "./components/Maininfo.vue";
 import FormSection1 from "./components/Form1.vue";
+import SliderBlock from "./components/SliderBlock.vue"
 
 export default {
   name: 'App',
   components: {
     HeaderMain,
     MainInfo,
-    FormSection1
+    FormSection1,
+    SliderBlock
   }
 }
 </script>
@@ -18,6 +20,7 @@ export default {
     <HeaderMain />
     <MainInfo />
     <FormSection1 />
+    <SliderBlock />
     <router-view />
   </div>
 </template>
